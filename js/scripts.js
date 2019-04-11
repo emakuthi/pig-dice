@@ -1,3 +1,5 @@
+// ****************Business logic*****************
+
 var totalRoll1 = 0;
 var totalRoll2 = 0;
 
@@ -6,26 +8,30 @@ var randomizer = function (){
   return Math.floor(Math.random() * 6) + 1;
 }
 
-var randomizer2 = function (){
-  return Math.floor(Math.random() * 6) + 1;
-}
-
-function player (name, score){
-  this.playerName = name;
-  this.scores = new Array();
+function player (score, roll, display){
+  this.totalScore = score;
+  this.rollDice = roll;
+  this.display = display;
 
 }
 
-var player1 = new Player()
-var player2 = new player()
+// var player1 = new Player()
+// var player2 = new player()
+totalScore.prototype.hold = 
+
+roll.prototype.throw = 
+
+display.prototype.arr = 
 
 scores = [];
 for (var i=1, t=6; i<t; i++) {
   arr.push(randomizer());
 }
 
-var totalScore = 0;
 
+
+
+// ***************user interface logic******************
 
 
 $(document).ready(
@@ -68,7 +74,7 @@ $("#p12").click(function(){
 
 
 $("#p2").click(function(){
-  var roll2 = randomizer2();
+  var roll2 = randomizer();
   totalRoll2+= roll2;
   $("#alert-1").text(" ")
   if (roll2!==1){
