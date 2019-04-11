@@ -1,4 +1,3 @@
-
 var totalRoll1 = 0;
 var totalRoll2 = 0;
 
@@ -7,7 +6,7 @@ var randomizer = function (){
 }
 
 
-$("#p1").click(function(){
+$(document).ready(function(){$("#p1").click(function(){
   
   var roll = randomizer();
   totalRoll1 += roll;
@@ -57,5 +56,4 @@ $("#restart").click(function(){
   $("#player2 h3").text("");
   $("#player2 h4").text("");
   
-})
-
+})})
