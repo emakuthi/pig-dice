@@ -140,7 +140,8 @@ button:hover, button:active {
   width: 50px;
   height: 50px;
   transform-style: preserve-3d;
-  transition: transform 1s; }
+  transition: transform 1s; 
+}
 
 .divot {
   position: absolute;
@@ -161,7 +162,7 @@ button:hover, button:active {
   position: absolute;
   width: 200px;
   height: 200px;
-  border: 2px solid black; }
+  border: 2px solid gold; }
 
 .side:nth-child(1) {
   transform: translateZ(100px); }
@@ -236,3 +237,16 @@ button:hover, button:active {
 #restart{
   margin:0 auto;
 }
+.players{
+  font-family: 'Monoton', cursive;
+}
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top:50px;
+  overflow: hidden;
+}
+
