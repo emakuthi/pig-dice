@@ -249,4 +249,7 @@ button:hover, button:active {
   padding-top:50px;
   overflow: hidden;
 }
-
+#alert-1, #alert-2{
+  height: 50px;
+  width: 400px;
+}

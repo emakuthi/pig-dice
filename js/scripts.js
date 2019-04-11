@@ -20,7 +20,7 @@ $(document).ready(
   }
   else{
      totalRoll1 ===0;
-     alert("oops! you have lost all your points") 
+     $("#alert-1").text("oops! you have lost all your points") ;
      $("#player1 h3").text("0");
      $("#player1 h4").text("0"); 
   }
@@ -42,13 +42,22 @@ $("#p2").click(function(){
   totalRoll2+= roll;
   if (roll!==1){
     $("#player2 h3").text(roll);
-    $("#player2 h4").text(totalRoll2);
+    $("#p1").prop("disabled",true);
+    $("#p1").css({"background": "grey", "box-shadow":"0 0 grey" });
+    $("#p12").css({"background": "grey", "box-shadow":"0 0 grey", "transition": "0s" });
   }
   else{
      totalRoll2 ===0;
-     alert("oops! you have lost all your points") 
+     $("#alert-2").text("oops! you have lost all your points") ;
      $("#player2 h3").text("0");
-     $("#player2 h4").text("0"); 
+     $("#player2 h4").text("your total points are:"+" "+ totalRoll2);
+     $("#p2").prop("disabled",true);
+     $("#p2").css({"background": "grey", "box-shadow":"0 0 grey" });
+     $("#p22").css({"background": "grey", "box-shadow":"0 0 grey", "transition": "0s" });
+     $("#p1").prop("disabled",false);
+     $("#p1").css({"background": "#802915", "box-shadow":"0 3px #802915" });
+     $("#p12").css({"background": "#802915", "box-shadow":"0 3px #802915", "transition": ".3s" });
+
   }
   
 })
