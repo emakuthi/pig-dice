@@ -235,7 +235,8 @@ button:hover, button:active {
   display: table;
   clear: both; }
 #restart{
-  margin:0 auto;
+  margin-top:20px;
+  margin-left: 70px;
 }
 .players{
   font-family: 'Monoton', cursive;
@@ -261,6 +262,7 @@ button:hover, button:active {
   background-size: contain;
   background: #ffffcc;
   border-radius: 10px;
+  margin-left: 60px;
 
 }
 #dice-image img{
