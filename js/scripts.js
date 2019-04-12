@@ -115,6 +115,15 @@ $("#restart").click(function(){
   $("#player1 h4").text("0");
   $("#player2 h3").text("0");
   $("#player2 h4").text("0");
+  $("#p1").prop("disabled",false);
+  $("#p2").prop("disabled",false);
+  $("#p12").prop("disabled",false);
+  $("#p22").prop("disabled",false);
+  $("#p1").css({"background": "#802915", "box-shadow":"0 3px #802915" });
+  $("#p12").css({"background": "#802915", "box-shadow":"0 3px #802915", "transition": ".3s" });
+  $("#p2").css({"background": "#802915", "box-shadow":"0 3px #802915" });
+  $("#p22").css({"background": "#802915", "box-shadow":"0 3px #802915", "transition": ".3s" });
+
  
 }) 
 })
