@@ -1,34 +1,35 @@
 // ****************Business logic*****************
 
-var totalRoll1 = 0;
-var totalRoll2 = 0;
-
 var randomizer = function (){
   
   return Math.floor(Math.random() * 6) + 1;
 }
 
-function player (score, roll, display){
-  this.totalScore = score;
-  this.rollDice = roll;
-  this.display = display;
 
+function Player(name) {
+  this.name ="";
+  this.totalScore = 0;
+  this.die = 0;
+  this.currentRound = [];
 }
 
-// var player1 = new Player()
-// var player2 = new player()
-totalScore.prototype.hold = 
+var player1 = new Player("player one", 0, 0, [])
+var player2 = new player("player two", 0, 0, [])
 
-roll.prototype.throw = 
 
-display.prototype.arr = 
-
-scores = [];
-for (var i=1, t=6; i<t; i++) {
-  arr.push(randomizer());
+Player.prototype.roll = function(){
+  this.die = randomizer();
+  this.currentRound.push(this.die);
+  return this.currentRound; 
 }
 
+Player.prototype.hold = function(){
 
+var sum = this.currentRound.reduce( function(total, amount){
+  return total + amount
+});
+
+}
 
 
 // ***************user interface logic******************
@@ -37,8 +38,7 @@ for (var i=1, t=6; i<t; i++) {
 $(document).ready(
   function(){$("#p1").click(function(){
    
-  var roll1 = randomizer();
-  totalRoll1 += roll1;
+ 
   $("#alert-2").text(" ")
   
   if (roll1!==1){
