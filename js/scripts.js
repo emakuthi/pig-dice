@@ -73,6 +73,10 @@ $("#p12").click(function(){
   $("#p1").prop("disabled",true);
   $("#p22").prop("disabled",false);
   $("#p2").prop("disabled",false);
+  $("#p2").css({"background": "#802915", "box-shadow":"0 3px #802915" });
+  $("#p22").css({"background": "#802915", "box-shadow":"0 3px #802915", "transition": ".3s" });
+  $("#p1").css({"background": "grey", "box-shadow":"0 0 grey" });
+  $("#p12").css({"background": "grey", "box-shadow":"0 0 grey", "transition": "0s" });
 })
 
 
@@ -111,6 +115,10 @@ $("#p22").click(function(){
   $("#p22").prop("disabled",true);
   $("#p12").prop("disabled",false);
   $("#p1").prop("disabled",false);
+  $("#p1").css({"background": "#802915", "box-shadow":"0 3px #802915" });
+  $("#p12").css({"background": "#802915", "box-shadow":"0 3px #802915", "transition": ".3s" });
+  $("#p2").css({"background": "grey", "box-shadow":"0 0 grey" });
+  $("#p22").css({"background": "grey", "box-shadow":"0 0 grey", "transition": "0s" });
 })
 
 $("#restart").click(function(){
