@@ -39,6 +39,7 @@ $(document).ready(
  
   $("#alert-2").text(" ")
   player1.roll();
+  player1.currentRound === [];
   
   if (player1.die!==1){
     $("#player1 h3").text([player1.currentRound]);
@@ -68,9 +69,11 @@ $("#p12").click(function(){
   player1.currentRound = [];
   $("#player1 h3").text("0");
   $("#player1 h4").text("your score for this round is"+" "+ player1.totalScore);
-  $("#p2").prop("disabled",true);
+  $("#p12").prop("disabled",true);
+  $("#p1").prop("disabled",true);
+  $("#p22").prop("disabled",false);
+  $("#p2").prop("disabled",false);
 })
-
 
 
 $("#p2").click(function(){
@@ -105,6 +108,9 @@ $("#p22").click(function(){
   $("#player2 h3").text("0");
   $("#player2 h4").text("your score for this round is"+" "+ player2.totalScore);
   $("#p2").prop("disabled",true);
+  $("#p22").prop("disabled",true);
+  $("#p12").prop("disabled",false);
+  $("#p1").prop("disabled",false);
 })
 
 $("#restart").click(function(){
