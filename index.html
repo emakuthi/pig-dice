@@ -1,133 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>PIGDICE</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="js/jquery-1.12.0.js"></script>
-  <script src="js/scripts.js"></script>
-</head>
-<body>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6" id="player1">
-        <h1>PLAYER 1</h1>
-        <div class="button">
-          <button id="btn-player2" name="roll" type="button">ROLL</button>
-          <button id="btn-player2-hold" name="hold" type="button">HOLD</button>
-        </div>
-        <h3></h3>
-        <h4></h4>
-      </div>
-      <div class="col-sm-6" id="player2">
-        <h1>PLAYER 2</h1>
-        <div class="button">
-          <button id="btn-player1" name="roll" type="button">ROLL</button>
-          <button id="btn-player1-hold" name="hold" type="button">HOLD</button>
-        </div>
-        <h3></h3>
-        <h4></h4>
-      </div>
-    </div>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.12.0.js"></script>
+    <script src="js/scripts.js"></script> 
+    <title>pig-dice</title>
+  </head>
+  <body>
     <div class="container">
       <div class="row">
-        <div class="col-sm-12">
-          <div class="dice-board">
-
-
-            <div class="container-dice">
-        
-        
-              <div id='dice1' class="dice dice-one">
-                <div id="dice-one-side-one" class='side one'>
-                  <div class="divot one-1"></div>
-                </div>
-                <div id="dice-one-side-two" class='side two'>
-                  <div class="divot two-1"></div>
-                  <div class="divot two-2"></div>
-                </div>
-                <div id="dice-one-side-three" class='side three'>
-                  <div class="divot three-1"></div>
-                  <div class="divot three-2"></div>
-                  <div class="divot three-3"></div>
-                </div>
-                <div id="dice-one-side-four" class='side four'>
-                  <div class="divot four-1"></div>
-                  <div class="divot four-2"></div>
-                  <div class="divot four-3"></div>
-                  <div class="divot four-4"></div>
-                </div>
-                <div id="dice-one-side-five" class='side five'>
-                  <div class="divot five-1"></div>
-                  <div class="divot five-2"></div>
-                  <div class="divot five-3"></div>
-                  <div class="divot five-4"></div>
-                  <div class="divot five-5"></div>
-                </div>
-                <div id="dice-one-side-six" class='side six'>
-                  <div class="divot six-1"></div>
-                  <div class="divot six-2"></div>
-                  <div class="divot six-3"></div>
-                  <div class="divot six-4"></div>
-                  <div class="divot six-5"></div>
-                  <div class="divot six-6"></div>
-                </div>
-              </div>
-        
-        
-            </div> <!-- END container-dice -->
-        
-        
-            <div class="container-dice">
-        
-        
-              <div id='dice2' class="dice dice-two">
-                <div id="dice-two-side-one" class='side one'>
-                  <div class="divot one-1"></div>
-                </div>
-                <div id="dice-two-side-two" class='side two'>
-                  <div class="divot two-1"></div>
-                  <div class="divot two-2"></div>
-                </div>
-                <div id="dice-two-side-three" class='side three'>
-                  <div class="divot three-1"></div>
-                  <div class="divot three-2"></div>
-                  <div class="divot three-3"></div>
-                </div>
-                <div id="dice-two-side-four" class='side four'>
-                  <div class="divot four-1"></div>
-                  <div class="divot four-2"></div>
-                  <div class="divot four-3"></div>
-                  <div class="divot four-4"></div>
-                </div>
-                <div id="dice-two-side-five" class='side five'>
-                  <div class="divot five-1"></div>
-                  <div class="divot five-2"></div>
-                  <div class="divot five-3"></div>
-                  <div class="divot five-4"></div>
-                  <div class="divot five-5"></div>
-                </div>
-                <div id="dice-two-side-six" class='side six'>
-                  <div class="divot six-1"></div>
-                  <div class="divot six-2"></div>
-                  <div class="divot six-3"></div>
-                  <div class="divot six-4"></div>
-                  <div class="divot six-5"></div>
-                  <div class="divot six-6"></div>
-                </div>
-              </div>
-        
-        
-              </div>  <!-- END container-dice 2 -->
-        
-        
-          </div> <!-- END dice-board -->
+        <div class="col-sm-4">
+          <div id="player1">
+            <h1 class="players">PLAYER  ONE</h1>
+            <div class="dice">
+              <h3></h3>
+              <h4></h4>
+              <h1></h1> 
+              <p id="alert-1"></p> 
+              <br><br><br>
+              <button id="p1" name="bttn" type="button">ROLL</button>
+              <br><br><br><br>
+              <button id="p12" name="bttn" type="button">HOLD</button> 
+            </div>
+          </div>
         </div>
-      </div>
+        <div class="col-sm-4">  
+            <button id="restart" name="bttn" type="button">RESTART</button>
+          <div id="dice-image">
+            <img src="images/inverted-dice-1.png" alt="" id="">
+          </div>
+          <div>
+            
+          </div>
+        </div> 
+         
+        <div class="col-sm-4">
+          <div id="player2">
+            <h1 class="players">PLAYER  TWO</h1>
+            <div class="dice">
+              <h3></h3>
+              <h4></h4>
+              <p id="alert-2"></p>
+              <br><br><br>
+              <button id="p2" name="bttn" type="button">ROLL</button>
+              <br><br><br><br>
+              <button id="p22" name="bttn" type="button">HOLD</button>
+            </div>
+          </div>
+        </div> 
     </div>
-  </div>
-</body>
+  </body>
 </html>
+
+
+
