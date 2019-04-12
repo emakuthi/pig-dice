@@ -1,34 +1,32 @@
 // ****************Business logic*****************
-
+//helper class
 var randomizer = function (){
   
-  return Math.floor(Math.random() * 6) + 1;
+  return Math.floor(Math.random() * 6) + 1;//picks a rondom unmber between 1 and 6.
 }
 
+//constructor for the player
 
-function Player(name) {
-  this.name ="";
+function Player() {
   this.totalScore = 0;
   this.die = 0;
   this.currentRound = [];
 }
 
-var player1 = new Player("player one", 0, 0, [])
-var player2 = new player("player two", 0, 0, [])
+//initialize the players;
 
+var player1 = new Player();// initializes player 1
+var player2 = new Player();//initializes player 2
 
+//on click
 Player.prototype.roll = function(){
   this.die = randomizer();
   this.currentRound.push(this.die);
-  return this.currentRound; 
+  
 }
 
 Player.prototype.hold = function(){
-
-var sum = this.currentRound.reduce( function(total, amount){
-  return total + amount
-});
-
+  this.totalScore += this.currentRound.reduce(function getSum(total, amount){return total + amount;});
 }
 
 
@@ -40,19 +38,20 @@ $(document).ready(
    
  
   $("#alert-2").text(" ")
+  player1.roll();
   
-  if (roll1!==1){
-    $("#player1 h3").text(roll1);
+  if (player1.die!==1){
+    $("#player1 h3").text([player1.currentRound]);
     $("#p2").prop("disabled",true);
     $("#p2").css({"background": "grey", "box-shadow":"0 0 grey" });
     $("#p22").css({"background": "grey", "box-shadow":"0 0 grey", "transition": "0s" });
     $("#alert-2").text("") ;
   }
   else{
-     totalRoll1 ===0;
+     player1.currentRound === [];
      $("#alert-1").text("oops! you have lost all your points") ;
-     $("#player1 h3").text("0");
-     $("#player1 h4").text("your total points are:"+" "+ totalRoll1);
+     $("#player1 h3").text(" 0 ");
+    //  $("#player1 h4").text("your total points are:"+" "+ player1.totalScore);
      $("#p1").prop("disabled",true);
      $("#p1").css({"background": "grey", "box-shadow":"0 0 grey" });
      $("#p12").css({"background": "grey", "box-shadow":"0 0 grey", "transition": "0s" });
@@ -65,29 +64,30 @@ $(document).ready(
 
 $("#p12").click(function(){
   // totalRoll1 += totalRoll1;
-  
+  player1.hold();
+  player1.currentRound = [];
   $("#player1 h3").text("0");
-  $("#player1 h4").text("your score for this round is"+" "+ totalRoll1);
-  
+  $("#player1 h4").text("your score for this round is"+" "+ player1.totalScore);
+  $("#p2").prop("disabled",true);
 })
 
 
 
 $("#p2").click(function(){
-  var roll2 = randomizer();
-  totalRoll2+= roll2;
+ 
   $("#alert-1").text(" ")
-  if (roll2!==1){
-    $("#player2 h3").text(roll2);
+  player2.roll();
+  $("#player2 h3").text(" ");
+  if (player2.die!==1){
+    $("#player2 h3").text(player2.currentRound);
     $("#p1").prop("disabled",true);
     $("#p1").css({"background": "grey", "box-shadow":"0 0 grey" });
     $("#p12").css({"background": "grey", "box-shadow":"0 0 grey", "transition": "0s" });
   }
   else{
-     totalRoll2 ===0;
+    player2.currentRound === [];
      $("#alert-2").text("oops! you have lost all your points") ;
      $("#player2 h3").text("0");
-     $("#player2 h4").text("your total points are:"+" "+ totalRoll2);
      $("#p2").prop("disabled",true);
      $("#p2").css({"background": "grey", "box-shadow":"0 0 grey" });
      $("#p22").css({"background": "grey", "box-shadow":"0 0 grey", "transition": "0s" });
@@ -100,26 +100,21 @@ $("#p2").click(function(){
 })
 
 $("#p22").click(function(){
-  // totalRoll2 += totalRoll2;
+  player2.hold();
+  player2.currentRound = [];
   $("#player2 h3").text("0");
-  $("#player2 h4").text("your score for this round is"+" "+ totalRoll2);
-  
+  $("#player2 h4").text("your score for this round is"+" "+ player2.totalScore);
+  $("#p2").prop("disabled",true);
 })
 
 $("#restart").click(function(){
-  totalRoll1 = 0;
-  totalRoll2 = 0;
+  player1.totalScore = 0;
+  player2.totalScore = 0;
   
   $("#player1 h3").text("0");
   $("#player1 h4").text("0");
   $("#player2 h3").text("0");
   $("#player2 h4").text("0");
-  totalRoll1 == 0;
-  totalRoll2 == 0;
-  
-})
-if(totalRoll1 === 100 || totalRoll2===100){
-  alert("game over!!!");
-}
-
+ 
+}) 
 })
