@@ -44,7 +44,7 @@ html {
   margin: 0; }
 
 body {
-  background: #297A4A;
+  
   perspective: 1000px;
   color: #ffffcc; }
 
@@ -247,8 +247,9 @@ button:hover, button:active {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  padding-top:50px;
+  padding-top:10px;
   overflow: hidden;
+  background: #297A4A;
 }
 #alert-1, #alert-2{
   height: 50px;
@@ -268,4 +269,9 @@ button:hover, button:active {
 #dice-image img{
   max-width: 100%;
   max-height: 100%;
+}
+#game-name{
+  margin-left: 35%;
+  margin-top: 0px
+  
 }
