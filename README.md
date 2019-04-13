@@ -1,4 +1,4 @@
-# _Pig Dice_
+# Pig Dice
 
 #### By **Elvis Makuthi, april 13, 2019**
 
