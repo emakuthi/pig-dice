@@ -42,7 +42,7 @@ body, html {
 .tabcontent {
   color: white;
   display: none;
-  padding: 100px 20px;
+  padding: 10px 20px;
   height: 100%;
 }
 
@@ -70,7 +70,7 @@ body, html {
     color: ivory;
     margin-left: 20%;
     padding-top: 50px; 
-    text-shadow: 2px 2px ivory;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
   }
 
   .container-title{
