@@ -1,7 +1,5 @@
 # _Pig Dice_
 
-#### Week 4 - practicing with objects
-
 #### By **Elvis Makuthi, april 13, 2019**
 
 ## Description
@@ -34,10 +32,6 @@ The first player to score 100 or more points wins.
 
 there are currently no known bugs experienced on the website but feedback on bugs encountered during viewing of the page will be highly appreciated and will go a long way into making the website better for the users. The only reason that the website may fail to load is if the Internet connection is slow or disconnected which will require you to troubleshoot your Internet connection
 
-## Support and contact details
-
-* Feel free to reach out with suggestions
-
 ## Technologies Used
 
 **Main Languages used:**
@@ -51,6 +45,10 @@ there are currently no known bugs experienced on the website but feedback on bug
 **Other Technologies:**
 
 * Bootstrap
+
+#live link:
+
+$
 
 # clone into repository
 
