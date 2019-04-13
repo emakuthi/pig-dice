@@ -26,7 +26,7 @@ The first player to score 100 or more points wins.
 ## Setup/Installation Requirements
 
 * Open CMD/Terminal
-* `git clone` this repository
+* $ git clone https://github.com/emakuthi/pig-dice
 * Open index.html file in a browser such as Google Chrome
 
 ## Known Bugs
