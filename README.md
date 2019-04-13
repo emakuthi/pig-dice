@@ -21,7 +21,7 @@ The first player to score 100 or more points wins.
  | When player rolls any other number add to turn total | 3     | 3  |
  | Player can end turn by "holding", and turn total is added to total scores      | 12      | 27         |
  | First player to reach 100, wins     | 9      | 100 - You win!       |
- | All the fields are reset to zero  | clik restart button      | 0       |
+ | All the fields are reset to zero  | clik restart button      | 0       | 0
 
 ## Setup/Installation Requirements
 
