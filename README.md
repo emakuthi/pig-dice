@@ -47,7 +47,7 @@ there are currently no known bugs experienced on the website but feedback on bug
 
 * Bootstrap
 
-#live link:
+## live link:
 
 $ live link https://emakuthi.github.io/pig-dice/
 

@@ -16,7 +16,9 @@ var diceImage = function (){
   else if(player1.die ===6 || player2.die === 6){ $("#dice-pic").atrr("src", "images/inverted-dice-6.png");}
   else{$("#dice-pic").atrr("src", "images/pig.png");}
 }
-
+function homePage() {
+  location.replace("RULES.html")
+}
 //constructor for the player
 
 function Player() {

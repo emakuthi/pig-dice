@@ -1,0 +1,68 @@
+
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+  background-image: url("../images/background.jpg");
+  background-size:cover;
+  text-shadow: aqua;
+}
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  /* background-color: #e9ecef; */
+  border-radius: 0.3rem;
+  text-align:justify;
+}
+
+/* Style tab links */
+.tablink {
+  float: left;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+  color: #ffffcc;
+  background: #AA4F39;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 3px #802915;
+  outline: none;
+  /* transition: .3s;  */
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {
+  background-image:url("images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+#News {
+  background-image:url("images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#Contact {
+  background-image:url("images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#About {  background-image:url("images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;}
+  
