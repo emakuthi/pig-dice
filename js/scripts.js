@@ -53,7 +53,8 @@ $(document).ready(
    
   $("#alert-2").text(" ")
   player1.roll();
-  player1.currentRound === [0];
+  player1.currentRound === [];
+  $("#player1 h3").text("0");
   //logic for terminating player1 if the dice show 1 during click event
   if (player1.die!==1){
     $("#player1 h3").text([player1.currentRound]);$("#p2").hide();$("#p22").hide();
@@ -62,15 +63,16 @@ $(document).ready(
   else{
      player1.currentRound === [];
      $("#alert-1").text("oops! you have lost all your points") ;
-     $("#player1 h3").text(" 0 ");
+     $("#player1 h3").text("0");
     $("#p1").hide();$("#p12").hide();$("#p2").show();$("#p22").show();
   }
   
 })
 
 $("#p12").click(function(){
- 
   player1.hold();
+  $("#player1 h3").text("0");
+  player1.currentRound = [];
   // logic for showing the winner if player2 hits the total score of over 100 points
   if(player1.totalScore>=100){
     $("#alert-winner1").text(" YOU'RE THE WINNER!!!");
