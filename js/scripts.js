@@ -17,7 +17,7 @@ var diceImage = function (){
   else{$("#dice-pic").atrr("src", "images/pig.png");}
 }
 function homePage() {
-  location.replace("RULES.html")
+  location.replace("index.html")
 }
 //constructor for the player
 
