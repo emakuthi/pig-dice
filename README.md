@@ -49,7 +49,7 @@ there are currently no known bugs experienced on the website but feedback on bug
 
 #live link:
 
-$
+$ live link https://emakuthi.github.io/pig-dice/
 
 # clone into repository
 
