@@ -1,119 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/jquery-1.12.0.js"></script>
-    <script src="js/scripts.js"></script> 
-    <script src="js/tabsMenu.js"></script> 
-    <title>pig-dice</title>
-  </head>
-  <body>
-    <h1 id="game-name" >PIG DICE GAME</h1> <button onclick="homePage()" name="HOME">HOME</button> 
-    
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div id="player1">
-            <h1 class="players">PLAYER  ONE</h1>
-            <div class="dice">
-              <h3></h3>
-              <h4></h4>
-              <h1 id="alert-winner1"></h1> 
-              <p id="alert-1"></p> 
-              <br><br><br>
-              <button id="p1" name="bttn" type="button">ROLL</button>
-              <br><br><br><br>
-              <button id="p12" name="bttn" type="button">HOLD</button> 
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4"> 
-            <div>
-                <button id="restart" name="bttn" type="button">RESTART</button>
-              </div> 
-            
-          <!-- <div id="dice-image"> -->
-              <!-- <div id="background"></div> -->
-              <div id="wrapper">
-                <!-- <input id="secondroll" name="roll" type="checkbox">
-                <input id="roll" name="roll" type="checkbox">
-                <label for="roll">Roll it!</label>
-                <label for="secondroll"><span>Stop!</span></label> -->
-                <div id="platform">
-                  <div id="dice">
-                    <div class="side front">
-                      <div class="dot center"></div>
-                    </div>
-                    <div class="side front inner"></div>
-                    <div class="side top">
-                      <div class="dot dtop dleft"></div>
-                      <div class="dot dbottom dright"></div>
-                    </div>
-                    <div class="side top inner"></div>
-                    <div class="side right">
-                      <div class="dot dtop dleft"></div>
-                      <div class="dot center"></div>
-                      <div class="dot dbottom dright"></div>
-                    </div>
-                    <div class="side right inner"></div>
-                    <div class="side left">
-                      <div class="dot dtop dleft"></div>
-                      <div class="dot dtop dright"></div>
-                      <div class="dot dbottom dleft"></div>
-                      <div class="dot dbottom dright"></div>
-                    </div>
-                    <div class="side left inner"></div>
-                    <div class="side bottom">
-                      <div class="dot center"></div>
-                      <div class="dot dtop dleft"></div>
-                      <div class="dot dtop dright"></div>
-                      <div class="dot dbottom dleft"></div>
-                      <div class="dot dbottom dright"></div>
-                    </div>
-                    <div class="side bottom inner"></div>
-                    <div class="side back">
-                      <div class="dot dtop dleft"></div>
-                      <div class="dot dtop dright"></div>
-                      <div class="dot dbottom dleft"></div>
-                      <div class="dot dbottom dright"></div>
-                      <div class="dot center dleft"></div>
-                      <div class="dot center dright"></div>
-                    </div>
-                    <div class="side back inner"></div>
-                    <div class="side cover x"></div>
-                    <div class="side cover y"></div>
-                    <div class="side cover z"></div>
-                  </div>
-                </div>
-              </div>
-            <!-- <img src="images/pig.jpg" alt="" id="dice-pic"> -->
-          <!-- </div>          -->
-          
-        </div> 
-         
-        <div class="col-sm-4">
-          <div id="player2">
-            <h1 class="players">PLAYER  TWO</h1>
-            <div class="dice">
-              <h3></h3>
-              <h4></h4>
-              <p id="alert-2"></p>
-              <h1 id="alert-winner2"></h1>
-              <br><br><br>
-              <button id="p2" name="bttn" type="button">ROLL</button>
-              <br><br><br><br>
-              <button id="p22" name="bttn" type="button">HOLD</button>
-            </div>
-          </div>
-        </div> 
-      </div>
-    </div>
-  </body>
-</html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/styles2.css">
+<script src="js/scripts2.js"></script>
 
+</head>
+<body>
+<button class="tablink" onclick="openPage('Home', this, 'red')">RULES</button>
+<button class="tablink" onclick="myFunction()" id="defaultOpen">PIG DICE GAME</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contacts</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+<div class="jumbotron">
+<div id="Home" class="tabcontent">
+  <h1>Rules of the game </h1>
+  <h3>
+    <ol>
+      <li>The game requires two players.</li>
+      <li>Any player can start at the start of the Game. </li>
+      <li>Roll the dice when it's your turn to play in the game.</li>
+      <li>See the score you get for each roll of the dice you make in the game.</li>
+      <li>See your cumulative score for each round you play in the game. For example, if you roll the scores 2-6-3 consecutively, you should see my end score as 11.</li>
+      <li>When you are satisfied with the points in that round, press hold button and the total cumulative score will be displayed.</li>
+      <li>When your dice give a number 1. you will get 0 on that round and the play will be transfered to the player two.</li>
+      <li>The player who reaches 100 points mark will be declared winner by an alert and game will be over.</li>
+    </ol>
+  </h3>
+</div>
+</div>
+<!-- <div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>coming soon!</p> 
+</div> -->
 
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>to be updated.</p>
+</div>
 
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>to be updated.</p>
+</div>  
+</body>
+</html> 
