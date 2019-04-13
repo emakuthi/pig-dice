@@ -5,6 +5,18 @@ var randomizer = function (){
   return Math.floor(Math.random() * 6) + 1;//picks a rondom unmber between 1 and 6.
 }
 
+
+var diceImage = function (){
+
+  if(player1.die ===1 || player2.die === 1){$("#dice-pic").atrr("src", "images/inverted-dice-1.png");}
+  else if(player1.die ===2 || player2.die === 2){$("#dice-pic").atrr("src", "images/inverted-dice-2.png");}
+  else if(player1.die ===3 || player2.die === 3){$("#dice-pic").atrr("src", "images/inverted-dice-3.png");}
+  else if(player1.die ===4 || player2.die === 4){$("#dice-pic").atrr("src", "images/inverted-dice-4.png");}
+  else if(player1.die ===5 || player2.die === 5){ $("#dice-pic").atrr("src", "images/inverted-dice-5.png");}
+  else if(player1.die ===6 || player2.die === 6){ $("#dice-pic").atrr("src", "images/inverted-dice-6.png");}
+  else{$("#dice-pic").atrr("src", "images/pig.png");}
+}
+
 //constructor for the player
 
 function Player() {
@@ -29,16 +41,7 @@ Player.prototype.hold = function(){
   this.totalScore += this.currentRound.reduce(function getSum(total, amount){return total + amount;});
 }
 
-var diceImage = function (){
 
-  if(player1.die ===1 || player2.die === 1){$("#dice-pic").atrr("src", "images/inverted-dice-1.png");}
-  else if(player1.die ===2 || player2.die === 2){$("#dice-pic").atrr("src", "images/inverted-dice-2.png");}
-  else if(player1.die ===3 || player2.die === 3){$("#dice-pic").atrr("src", "images/inverted-dice-3.png");}
-  else if(player1.die ===4 || player2.die === 4){$("#dice-pic").atrr("src", "images/inverted-dice-4.png");}
-  else if(player1.die ===5 || player2.die === 5){ $("#dice-pic").atrr("src", "images/inverted-dice-5.png");}
-  else if(player1.die ===6 || player2.die === 6){ $("#dice-pic").atrr("src", "images/inverted-dice-6.png");}
-  else{$("#dice-pic").atrr("src", "images/pig.png");}
-}
 
 // ***************user interface logic******************
 
@@ -117,6 +120,6 @@ $("#restart").click(function(){
   player2.totalScore = 0;
   
   $("#player1 h3").text("0");$("#player1 h4").text("0");$("#player2 h3").text("0");$("#player2 h4").text("0");
-  $("#p2").show();$("#p22").show();$("#p1").show();$("#p12").show();
+  $("#p2").show();$("#p22").show();$("#p1").show();$("#p12").show();$("#alert-winner1").text(" ");$("#alert-winner2").text("");
 }) 
 })
