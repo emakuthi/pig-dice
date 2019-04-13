@@ -65,4 +65,15 @@ body, html {
 #About {  background-image:url("images/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;}
-  
+.container-title #logo{
+    font-size: 80px;
+    color: ivory;
+    margin-left: 20%;
+    padding-top: 50px; 
+    text-shadow: 2px 2px ivory;
+  }
+
+  .container-title{
+    padding-top: 100px; 
+  }
+
