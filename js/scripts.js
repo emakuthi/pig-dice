@@ -41,7 +41,10 @@ Player.prototype.roll = function(){
 //to hold the score and display the total score
 
 Player.prototype.hold = function(){
+
+  
   this.totalScore += this.currentRound.reduce(function getSum(total, amount){return total + amount;});
+ this.currentRound = [];
 }
 
 
@@ -53,15 +56,15 @@ $(document).ready(
    
   $("#alert-2").text(" ")
   player1.roll();
-  player1.currentRound === [];
+ 
   $("#player1 h3").text("0");
   //logic for terminating player1 if the dice show 1 during click event
   if (player1.die!==1){
-    $("#player1 h3").text([player1.currentRound]);$("#p2").hide();$("#p22").hide();
+    $("#player1 h3").text(player1.currentRound);$("#p2").hide();$("#p22").hide();
     $("#alert-2").text("") ;
   }
   else{
-     player1.currentRound === [];
+     player1.currentRound = [];
      $("#alert-1").text("oops! you have lost all your points") ;
      $("#player1 h3").text("0");
     $("#p1").hide();$("#p12").hide();$("#p2").show();$("#p22").show();
@@ -98,7 +101,7 @@ $("#p2").click(function(){
   }
   else{
 
-    player2.currentRound === [];
+    player2.currentRound = [];
      $("#alert-2").text("oops! you have lost all your points") ;
      $("#player2 h3").text("0");$("#p2").hide();$("#p22").hide();$("#p1").show(); $("#p12").show();
       // diceImage();
